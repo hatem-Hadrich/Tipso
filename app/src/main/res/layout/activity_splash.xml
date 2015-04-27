@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash"
+    android:background="#339DC6">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="3843dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tipso_logo"
+            android:src="@drawable/splash"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.68"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipso"
+            android:id="@+id/title_splash"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:textSize="80dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="313dp"
+            android:layout_height="wrap_content"
+            android:text="Tipso every day...Your life will changes... Useful techniques for social media marketers"
+            android:id="@+id/description_splash"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:gravity="center_vertical|center|center_horizontal" />
+
+        <ProgressBar
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="103dp"
+            android:layout_height="124dp"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="40dp" />
+    </LinearLayout>
+</RelativeLayout>
