@@ -1,9 +1,10 @@
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.exemple.tipso.Acceuil"
+    android:orientation="vertical"
     android:background="#339DC6">
 
     <FrameLayout
@@ -12,7 +13,7 @@
         android:id="@+id/frameLayout">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="87dp"
             android:layout_height="wrap_content"
             android:text="@string/title_acceuil"
             android:id="@+id/title_home"
@@ -28,7 +29,7 @@
             android:layout_gravity="left|center_vertical"
             android:src="@drawable/menu_icon"
             android:padding="5dp"
-            android:contentDescription="List of categorie" />
+            android:contentDescription="@string/ListeCategorie" />
 
         <ImageView
             android:layout_width="40dp"
@@ -72,13 +73,13 @@
                 <FrameLayout
                     android:id="@android:id/tabcontent"
                     android:layout_width="fill_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="409dp"
                     android:layout_weight="0.62">
 
                     <LinearLayout
                         android:id="@+id/home"
                         android:layout_width="384dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="410dp"
                         android:background="@android:color/white"
                         android:orientation="vertical">
 
@@ -150,4 +151,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
