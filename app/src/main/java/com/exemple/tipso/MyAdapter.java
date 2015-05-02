@@ -23,11 +23,11 @@ public class MyAdapter extends BaseAdapter
     {
         inflater = LayoutInflater.from(context);
 
-        items.add(new Item("Image 1", R.drawable.image1));
-        items.add(new Item("Image 2", R.drawable.image2));
-        items.add(new Item("Image 3", R.drawable.image3));
-        items.add(new Item("Image 4", R.drawable.image4));
-        items.add(new Item("Image 5", R.drawable.image5));
+        items.add(new Item("New Technology", R.drawable.image1));
+        items.add(new Item("Good Drink", R.drawable.image2));
+        items.add(new Item("Mobile", R.drawable.image3));
+        items.add(new Item("For Foots", R.drawable.image4));
+        items.add(new Item("New", R.drawable.image5));
     }
 
     @Override

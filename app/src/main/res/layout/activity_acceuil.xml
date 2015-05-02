@@ -5,53 +5,53 @@
     android:layout_height="match_parent"
     tools:context="com.exemple.tipso.Acceuil"
     android:orientation="vertical"
-    android:background="#339DC6">
+    android:background="#E4E4E4E4">
 
     <FrameLayout
-        android:layout_width="390dp"
-        android:layout_height="55dp"
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="#339DC6"
         android:id="@+id/frameLayout">
 
         <TextView
-            android:layout_width="87dp"
+            android:layout_width="55dp"
             android:layout_height="wrap_content"
             android:text="@string/title_acceuil"
             android:id="@+id/title_home"
             android:layout_gravity="center"
             android:gravity="center_vertical|center|center_horizontal"
             android:textColor="@android:color/white"
-            android:textSize="35sp" />
+            android:textSize="24dp" />
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:id="@+id/imgMenu"
-            android:layout_gravity="left|center_vertical"
             android:src="@drawable/menu_icon"
-            android:padding="5dp"
-            android:contentDescription="@string/ListeCategorie" />
+            android:contentDescription="@string/ListeCategorie"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dp" />
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:id="@+id/imgAdd"
-            android:layout_gravity="right|center_vertical"
             android:src="@drawable/add"
-            android:padding="4dp"
-            android:contentDescription="@string/add_tips" />
+            android:contentDescription="@string/add_tips"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical|right" />
 
     </FrameLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/frameLayout"
+        android:layout_height="wrap_content"
         android:weightSum="1">
 
         <TabHost
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="0dp"
             android:id="@+id/tabHost"
             android:layout_weight="0.86">
 
@@ -63,91 +63,130 @@
 
                 <TabWidget
                     android:id="@android:id/tabs"
-                    android:layout_width="384dp"
-                    android:layout_height="57dp"
-                    android:tabStripEnabled="true"
-                    android:baselineAligned="false"
-                    android:clickable="true"
-                    android:background="@android:color/white"/>
+                    android:background="@android:color/white"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:tag="tab0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/icon_home" />
+                    <TextView
+                        android:tag="tab1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/icon_profile" />
+                    <TextView
+                        android:tag="tab2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/icon_settings" />
+
+                </TabWidget>
 
                 <FrameLayout
                     android:id="@android:id/tabcontent"
                     android:layout_width="fill_parent"
-                    android:layout_height="409dp"
+                    android:layout_height="fill_parent"
                     android:layout_weight="0.62">
 
                     <LinearLayout
-                        android:id="@+id/home"
-                        android:layout_width="384dp"
-                        android:layout_height="410dp"
-                        android:background="@android:color/white"
+                        android:id="@+id/Home"
+                        android:layout_width="fill_parent"
+                        android:layout_height="417dp"
                         android:orientation="vertical">
 
                         <FrameLayout
-                            xmlns:android="http://schemas.android.com/apk/res/android"
-                            android:layout_width="match_parent"
-                            android:layout_height="422dp">
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent">
                             <GridView
                                 android:id="@+id/gridview"
-                                android:layout_width="386dp"
-                                android:layout_height="412dp"
-                                android:verticalSpacing="0dp"
-                                android:horizontalSpacing="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:verticalSpacing="7dp"
+                                android:horizontalSpacing="7dp"
                                 android:stretchMode="columnWidth"
                                 android:numColumns="auto_fit"
                                 android:choiceMode="singleChoice"
-                                android:fastScrollAlwaysVisible="true"
+                                android:fastScrollAlwaysVisible="false"
                                 android:fastScrollEnabled="true"
-                                android:nestedScrollingEnabled="true"
+                                android:nestedScrollingEnabled="false"
                                 android:scrollingCache="false"
                                 android:smoothScrollbar="false"
                                 android:stackFromBottom="false"
-                                android:background="#ffcad5ff" />
+                                android:padding="7dp" />
                         </FrameLayout>
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/profile"
+                        android:text="Profil"
                         android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical"></LinearLayout>
+                        android:layout_height="417dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="87dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_acceuil"
+                            android:id="@+id/title_profil"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical|center|center_horizontal"
+                            android:textColor="@android:color/white"
+                            android:textSize="35sp" />
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/settings"
+                        android:text="Settings"
                         android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical"></LinearLayout>
+                        android:layout_height="417dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="87dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_acceuil"
+                            android:id="@+id/title_settings"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical|center|center_horizontal"
+                            android:textColor="@android:color/white"
+                            android:textSize="35sp" />
+
+                    </LinearLayout>
                 </FrameLayout>
 
             </LinearLayout>
         </TabHost>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="53dp">
 
-            <ImageView
-                android:layout_width="59dp"
-                android:layout_height="47dp"
-                android:id="@+id/imgSearch"
-                android:src="@android:drawable/ic_menu_search"
-                android:background="#b9eeeeee"
-                android:contentDescription="@string/search_icon" />
+    </LinearLayout>
 
-            <EditText
-                android:layout_width="326dp"
-                android:layout_height="47dp"
-                android:id="@+id/txtSearch"
-                android:background="#cdfffafc"
-                android:textColor="@android:color/black"
-                android:hint="@string/text_search"
-                android:gravity="center_vertical|center|center_horizontal"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp">
 
-        </LinearLayout>
+        <ImageView
+            android:layout_width="59dp"
+            android:layout_height="47dp"
+            android:id="@+id/imgSearch"
+            android:src="@android:drawable/ic_menu_search"
+            android:background="#b9eeeeee"
+            android:contentDescription="@string/search_icon" />
 
+        <EditText
+            android:layout_width="326dp"
+            android:layout_height="47dp"
+            android:id="@+id/txtSearch"
+            android:background="#cdfffafc"
+            android:textColor="@android:color/black"
+            android:hint="@string/text_search"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:textStyle="bold"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
