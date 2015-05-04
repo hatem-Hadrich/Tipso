@@ -126,15 +126,130 @@
                         android:layout_height="417dp"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="87dp"
-                            android:layout_height="wrap_content"
-                            android:text="@string/title_acceuil"
-                            android:id="@+id/title_profil"
-                            android:layout_gravity="center"
-                            android:gravity="center_vertical|center|center_horizontal"
-                            android:textColor="@android:color/white"
-                            android:textSize="35sp" />
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="160dp"
+                            android:orientation="vertical"
+                            android:layout_gravity="top">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                android:id="@+id/imgCover"
+                                android:layout_gravity="top"
+                                android:src="@drawable/cover_profile"
+                                android:background="#ff25ff8d" />
+                            <TextView
+                                android:layout_width="87dp"
+                                android:layout_height="40dp"
+                                android:text="Hadrich Hatem"
+                                android:layout_marginBottom="0dp"
+                                android:id="@+id/title_profile"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textColor="@android:color/black"
+                                android:textSize="35sp"
+                                android:background="#ff25ff8d"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                android:layout_gravity="left|bottom" />
+
+                        </LinearLayout>
+
+                        <TabHost
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/tabHost2">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+
+                                <TabWidget
+                                    android:id="@android:id/tabs"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:tag="tab0"
+                                        android:text="My Tips"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent" />
+                                    <TextView
+                                        android:tag="tab1"
+                                        android:text="My Profile"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent" />
+                                    <TextView
+                                        android:tag="tab2"
+                                        android:text="My Friends"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent" />
+
+                                </TabWidget>
+
+                                <FrameLayout
+                                    android:id="@android:id/tabcontent"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <LinearLayout
+                                        android:id="@+id/tips"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="87dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/title_acceuil"
+                                            android:id="@+id/txt1"
+                                            android:layout_gravity="center"
+                                            android:gravity="center_vertical|center|center_horizontal"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="35sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/profil"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="87dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/title_acceuil"
+                                            android:id="@+id/txt2"
+                                            android:layout_gravity="center"
+                                            android:gravity="center_vertical|center|center_horizontal"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="35sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/friends"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="87dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/title_acceuil"
+                                            android:id="@+id/txt3"
+                                            android:layout_gravity="center"
+                                            android:gravity="center_vertical|center|center_horizontal"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="35sp" />
+
+                                    </LinearLayout>
+                                </FrameLayout>
+                            </LinearLayout>
+                        </TabHost>
+
 
                     </LinearLayout>
 
@@ -167,7 +282,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="53dp">
+        android:layout_height="53dp"
+        android:gravity="bottom">
 
         <ImageView
             android:layout_width="59dp"
