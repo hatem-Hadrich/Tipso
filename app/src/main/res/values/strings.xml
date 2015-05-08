@@ -11,4 +11,5 @@
     <string name="text_search">Search</string>
     <string name="ListeCategorie">List of categorie</string>
     <string name="icon_home">icon home</string>
+    <string name="title_activity_addTipso">Add Tipso</string>
 </resources>
