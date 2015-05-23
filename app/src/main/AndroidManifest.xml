@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.exemple.tipso">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,12 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".SignIn"
             android:label="@string/title_activity_sign_in" />
         <activity
+            android:name=".LogIn"
+            android:label="LogIn" />
+
+        <activity
             android:name=".Acceuil"
             android:label="@string/title_activity_acceuil" />
+
         <activity
             android:name=".AddTipso"
             android:label="@string/title_activity_addTipso" />

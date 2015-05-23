@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.exemple.tipso.SignIn"
+    android:background="#339DC6">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="183dp"
+            android:layout_height="134dp"
+            android:text="Sign up"
+            android:id="@+id/title_signIn"
+
+            android:textSize="50dp"
+            android:paddingTop="5dp"
+            android:autoText="false"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:layout_gravity="center_horizontal" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="     Enter your information"
+
+            android:id="@+id/textView2"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/firstName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:background="#FFFFFF"
+            android:layout_weight="0.07"
+            android:hint="First name"
+            android:layout_marginTop="20dp"
+            android:textColor="#ff464642" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/secondName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:layout_weight="0.07"
+            android:hint="Second name" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/email"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:layout_weight="0.07"
+            android:hint="Your email" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:inputType="textPassword"
+            android:id="@+id/passWord"
+            android:maxLines="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:layout_weight="0.07"
+            android:hint="Enter password" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:id="@+id/passWordConfirm"
+            android:maxLines="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:layout_weight="0.07"
+            android:hint="Enter password again" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/test"
+            android:textStyle="bold"
+            android:layout_weight="0.17" />
+
+        <Button
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:text="JOIN US"
+            android:id="@+id/join"
+
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:background="#ff3c5a99"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar2"
+            android:visibility="invisible"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+</RelativeLayout>

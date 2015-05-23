@@ -9,29 +9,20 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:weightSum="1"
-        android:layout_alignParentEnd="true">
-
-        <ImageView
-            android:layout_width="149dp"
-            android:layout_height="150dp"
-            android:id="@+id/signInImg"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="10dp"
-            android:src="@drawable/signin"
-            android:layout_marginTop="5dp" />
+        android:weightSum="1">
 
         <TextView
             android:layout_width="164dp"
             android:layout_height="wrap_content"
-            android:text="SignIn"
+            android:text="Tipso"
             android:id="@+id/title_signIn"
             android:layout_gravity="center_horizontal"
             android:textSize="50dp"
             android:textColor="@android:color/white"
             android:paddingTop="5dp"
             android:autoText="false"
-            android:gravity="center_vertical|center|center_horizontal" />
+            android:gravity="center_vertical|center|center_horizontal"
+            android:layout_weight="0.37" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,39 +51,30 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:ems="10"
             android:id="@+id/email_signIn"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#ffacb8b0"
-            android:textStyle="normal"
-            android:background="@android:color/white"
-            android:hint="Email@email.com"
-            android:textSize="30dp"
-            android:gravity="center_vertical|center|center_horizontal"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:layout_weight="0.07"
+            android:hint="Your Email.." />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
             android:id="@+id/password_singIn"
-            android:layout_gravity="center_horizontal"
-            android:hint="Password"
-            android:background="@android:color/white"
-            android:textSize="30dp"
-            android:gravity="center_vertical|center|center_horizontal"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:layout_weight="0.07"
+            android:hint="Enter Password.." />
 
         <Button
-            android:layout_width="234dp"
+            android:layout_width="282dp"
             android:layout_height="wrap_content"
-            android:text="SignIn"
+            android:layout_marginTop="10dp"
+            android:text="LOG IN"
             android:id="@+id/btnSignIn"
             android:onClick="authentication"
             android:layout_gravity="center_horizontal"
@@ -102,11 +84,27 @@
             android:layout_marginBottom="10dp" />
 
         <Button
-            android:layout_width="233dp"
+            android:layout_width="282dp"
             android:layout_height="wrap_content"
+            android:text="SIGN IN WITH EMAIL"
+            android:id="@+id/login_btn"
+
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:textColor="#ff464642"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:onClick="signUp" />
+
+        <Button
+            android:layout_width="282dp"
+            android:layout_height="40dp"
             android:id="@+id/btnFacebook"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/login_facebook" />
+            android:background="@drawable/login_facebook"
+            android:layout_weight="0.09" />
 
     </LinearLayout>
+
 </RelativeLayout>
