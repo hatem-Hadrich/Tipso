@@ -18,7 +18,6 @@ public class Acceuil extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceuil);
-
         //adapter for list of tips on grid view in interface home
         GridView gridView = (GridView) findViewById(R.id.gridview);
         gridView.setAdapter(new MyAdapter(this));

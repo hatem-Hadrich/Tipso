@@ -11,12 +11,13 @@ import android.widget.Button;
 public class SignIn extends Activity {
 
     Button btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        btn = (Button)findViewById(R.id.btnSignIn);
+        btn = (Button) findViewById(R.id.btnSignIn);
     }
 
     public void authentication(View view) {

@@ -18,13 +18,13 @@
         </activity>
         <activity
             android:name=".SignIn"
-            android:label="@string/title_activity_sign_in"></activity>
+            android:label="@string/title_activity_sign_in" />
         <activity
             android:name=".Acceuil"
-            android:label="@string/title_activity_acceuil"></activity>
+            android:label="@string/title_activity_acceuil" />
         <activity
             android:name=".AddTipso"
-            android:label="@string/title_activity_addTipso"></activity>
+            android:label="@string/title_activity_addTipso" />
     </application>
 
 </manifest>
