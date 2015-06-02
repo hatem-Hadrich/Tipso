@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     tools:context="com.exemple.tipso.Acceuil"
     android:orientation="vertical"
-    android:background="#E4E4E4E4">
+    android:background="#F5F5F5F5">
 
     <FrameLayout
         android:layout_width="fill_parent"
@@ -12,24 +12,29 @@
         android:background="#339DC6"
         android:id="@+id/frameLayout">
 
-        <TextView
-            android:layout_width="55dp"
-            android:layout_height="wrap_content"
-            android:text="@string/title_acceuil"
-            android:id="@+id/title_home"
-            android:layout_gravity="center"
-            android:gravity="center_vertical|center|center_horizontal"
-            android:textColor="@android:color/white"
-            android:textSize="24dp" />
-
         <ImageView
             android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:id="@+id/imgMenu"
-            android:src="@drawable/menu_icon"
-            android:contentDescription="@string/ListeCategorie"
-            android:layout_gravity="left|center_vertical"
-            android:layout_marginLeft="10dp" />
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/imgSearch"
+            android:gravity="center_vertical"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="@string/search_icon"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="45dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="35dp"
+            android:id="@+id/txtSearch"
+            android:textColor="@android:color/white"
+            android:hint="@string/text_search"
+            android:textColorHint="@android:color/white"
+            android:gravity="center_vertical|bottom"
+            android:backgroundTint="#ffffffff"
+            android:layout_gravity="center_vertical" />
 
         <ImageView
             android:layout_width="32dp"
@@ -38,7 +43,7 @@
             android:src="@drawable/add"
             android:onClick="addTipso"
             android:contentDescription="@string/add_tips"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             android:layout_gravity="center_vertical|right" />
 
     </FrameLayout>
@@ -46,14 +51,13 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:weightSum="1">
 
         <TabHost
             android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:id="@+id/tabHost"
-            android:layout_weight="0.86">
+            android:layout_height="match_parent"
+            android:id="@+id/tabHost">
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -90,23 +94,22 @@
                 <FrameLayout
                     android:id="@android:id/tabcontent"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="0.62">
+                    android:layout_height="fill_parent">
 
                     <LinearLayout
                         android:id="@+id/Home"
                         android:layout_width="fill_parent"
-                        android:layout_height="417dp"
+                        android:layout_height="fill_parent"
                         android:orientation="vertical">
 
                         <FrameLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="fill_parent">
+                            android:layout_height="wrap_content">
 
-                        <GridView
+                            <GridView
                                 android:id="@+id/gridview"
                                 android:layout_width="match_parent"
-                                android:layout_height="fill_parent"
+                                android:layout_height="468dp"
                                 android:verticalSpacing="7dp"
                                 android:horizontalSpacing="7dp"
                                 android:stretchMode="columnWidth"
@@ -124,38 +127,23 @@
 
                     <LinearLayout
                         android:id="@+id/profile"
-                        android:text="Profil"
+                        android:text="@string/profile"
                         android:layout_width="fill_parent"
-                        android:layout_height="417dp"
+                        android:layout_height="fill_parent"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="fill_parent"
                             android:layout_height="160dp"
                             android:orientation="vertical"
+                            android:id="@+id/coverProfile"
                             android:layout_gravity="top">
 
-                            <ImageView
+                            <GridView
+                                android:id="@+id/coverview"
                                 android:layout_width="match_parent"
                                 android:layout_height="160dp"
-                                android:id="@+id/imgCover"
-                                android:layout_gravity="top"
-                                android:src="@drawable/cover_profile"
-                                android:background="#ff25ff8d" />
-
-                            <TextView
-                                android:layout_width="87dp"
-                                android:layout_height="40dp"
-                                android:text="Hadrich Hatem"
-                                android:layout_marginBottom="0dp"
-                                android:id="@+id/title_profile"
-                                android:gravity="center_vertical|center_horizontal"
-                                android:textColor="@android:color/black"
-                                android:textSize="35sp"
-                                android:background="#ff25ff8d"
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:layout_gravity="left|bottom" />
+                                android:numColumns="1" />
 
                         </LinearLayout>
 
@@ -182,19 +170,19 @@
 
                                         <TextView
                                             android:tag="tab0"
-                                            android:text="My Tips"
+                                            android:text="@string/tips"
                                             android:layout_width="wrap_content"
                                             android:layout_height="fill_parent" />
 
                                         <TextView
                                             android:tag="tab1"
-                                            android:text="My Profile"
+                                            android:text="@string/info"
                                             android:layout_width="wrap_content"
                                             android:layout_height="fill_parent" />
 
                                         <TextView
                                             android:tag="tab2"
-                                            android:text="My Friends"
+                                            android:text="Friends"
                                             android:layout_width="wrap_content"
                                             android:layout_height="fill_parent" />
 
@@ -218,23 +206,219 @@
 
                                         </LinearLayout>
 
-                                        <LinearLayout
-                                            android:id="@+id/MyProfile"
+                                        <ScrollView
                                             android:layout_width="fill_parent"
-                                            android:layout_height="fill_parent"
-                                            android:orientation="vertical">
+                                            android:layout_height="fill_parent">
 
-                                            <TextView
-                                                android:layout_width="87dp"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/title_acceuil"
-                                                android:id="@+id/txt2"
-                                                android:layout_gravity="center"
-                                                android:gravity="center_vertical|center|center_horizontal"
-                                                android:textColor="@android:color/white"
-                                                android:textSize="35sp" />
+                                            <LinearLayout
+                                                android:id="@+id/MyProfile"
+                                                android:layout_width="fill_parent"
+                                                android:layout_height="fill_parent"
 
-                                        </LinearLayout>
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Contact Informations"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginBottom="5dp"
+                                                    android:id="@+id/txtcontact"
+                                                    android:textSize="18dp"
+                                                    android:gravity="center_vertical|center|center_horizontal"
+                                                    android:textColor="#e4191919" />
+
+                                                <LinearLayout
+                                                    android:id="@+id/mobile"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="5dp"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="32dp"
+                                                        android:layout_height="32dp"
+                                                        android:id="@+id/icMobile"
+                                                        android:src="@drawable/phone" />
+
+                                                    <TextView
+                                                        android:layout_width="250dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="+216 24 74 02 60"
+                                                        android:id="@+id/phone"
+                                                        android:layout_gravity="center"
+                                                        android:gravity="center_vertical|center|center_horizontal"
+                                                        android:textColor="@android:color/black" />
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/adresse"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="5dp"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="32dp"
+                                                        android:layout_height="32dp"
+                                                        android:id="@+id/icAdresse"
+                                                        android:background="#ff25ff8d" />
+
+                                                    <TextView
+                                                        android:layout_width="250dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Sfax, Tunisia"
+                                                        android:id="@+id/location"
+                                                        android:layout_gravity="center"
+                                                        android:gravity="center_vertical|center|center_horizontal"
+                                                        android:textColor="@android:color/black" />
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/travail"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="5dp"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="32dp"
+                                                        android:layout_height="32dp"
+                                                        android:id="@+id/icJob"
+                                                        android:src="@drawable/job" />
+
+                                                    <TextView
+                                                        android:layout_width="250dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="I'm a software developer"
+                                                        android:id="@+id/job"
+                                                        android:layout_gravity="center"
+                                                        android:gravity="center_vertical|center|center_horizontal"
+                                                        android:textColor="@android:color/black" />
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/email"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="5dp"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="32dp"
+                                                        android:layout_height="32dp"
+                                                        android:id="@+id/icMail"
+                                                        android:src="@drawable/mail" />
+
+                                                    <TextView
+                                                        android:layout_width="250dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="mr.exemple@tipso.com"
+                                                        android:id="@+id/mail"
+                                                        android:layout_gravity="center"
+                                                        android:gravity="center_vertical|center|center_horizontal"
+                                                        android:textColor="@android:color/black" />
+
+                                                </LinearLayout>
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Basic Informations"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginBottom="5dp"
+                                                    android:id="@+id/txtbasic"
+                                                    android:textSize="18dp"
+                                                    android:gravity="center_vertical|center|center_horizontal"
+                                                    android:textColor="#e4191919" />
+
+                                                <LinearLayout
+                                                    android:id="@+id/birth"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="5dp"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="32dp"
+                                                        android:layout_height="32dp"
+                                                        android:id="@+id/icBirth"
+                                                        android:background="#ff25ff8d" />
+
+                                                    <TextView
+                                                        android:layout_width="250dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="14 september 1989"
+                                                        android:id="@+id/birthday"
+                                                        android:layout_gravity="center"
+                                                        android:gravity="center_vertical|center|center_horizontal"
+                                                        android:textColor="@android:color/black" />
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/sex"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="5dp"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="32dp"
+                                                        android:layout_height="32dp"
+                                                        android:id="@+id/icGendre"
+                                                        android:src="@drawable/mail" />
+
+                                                    <TextView
+                                                        android:layout_width="250dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Male"
+                                                        android:id="@+id/gendre"
+                                                        android:layout_gravity="center"
+                                                        android:gravity="center_vertical|center|center_horizontal"
+                                                        android:textColor="@android:color/black" />
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/langage"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="5dp"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="32dp"
+                                                        android:layout_height="32dp"
+                                                        android:id="@+id/icLanguage"
+                                                        android:src="@drawable/mail" />
+
+                                                    <TextView
+                                                        android:layout_width="250dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="French, English, Arabic"
+                                                        android:id="@+id/languages"
+                                                        android:layout_gravity="center"
+                                                        android:gravity="center_vertical|center|center_horizontal"
+                                                        android:textColor="@android:color/black" />
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                        </ScrollView>
 
                                         <LinearLayout
                                             android:id="@+id/MyFriends"
@@ -264,9 +448,9 @@
 
                     <LinearLayout
                         android:id="@+id/settings"
-                        android:text="Settings"
+                        android:text="@string/settings"
                         android:layout_width="fill_parent"
-                        android:layout_height="417dp"
+                        android:layout_height="fill_parent"
                         android:orientation="vertical">
 
                         <TextView
@@ -285,33 +469,6 @@
             </LinearLayout>
         </TabHost>
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="53dp"
-        android:gravity="bottom">
-
-        <ImageView
-            android:layout_width="59dp"
-            android:layout_height="47dp"
-            android:id="@+id/imgSearch"
-            android:src="@android:drawable/ic_menu_search"
-            android:background="#b9eeeeee"
-            android:contentDescription="@string/search_icon" />
-
-        <EditText
-            android:layout_width="326dp"
-            android:layout_height="47dp"
-            android:id="@+id/txtSearch"
-            android:background="#cdfffafc"
-            android:textColor="@android:color/black"
-            android:hint="@string/text_search"
-            android:gravity="center_vertical|center|center_horizontal"
-            android:textStyle="bold"
-            android:textSize="20sp" />
 
     </LinearLayout>
 

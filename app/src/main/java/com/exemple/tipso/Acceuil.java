@@ -26,6 +26,10 @@ public class Acceuil extends Activity {
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(new ListViewAdapter(this));
 
+        //adapter for cover of profile
+        GridView cover = (GridView) findViewById(R.id.coverview);
+        cover.setAdapter(new CoverAdapter(this));
+
         tabAcceuil();
         tabProfil();
     }
