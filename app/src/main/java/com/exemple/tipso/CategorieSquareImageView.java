@@ -20,6 +20,7 @@ public class CategorieSquareImageView extends ImageView {
         super(context, attrs, defStyle);
     }
 
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);

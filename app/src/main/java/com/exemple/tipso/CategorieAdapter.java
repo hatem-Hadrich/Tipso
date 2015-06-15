@@ -28,6 +28,7 @@ public class CategorieAdapter extends BaseAdapter {
         items.add(new Item("New", R.drawable.image5));
     }
 
+
     @Override
     public int getCount() {
         return items.size();

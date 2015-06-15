@@ -449,7 +449,8 @@
                         android:layout_height="fill_parent"
                         android:orientation="vertical">
 
-                        <GridView
+
+                    <GridView
                             android:id="@+id/categoriegridview"
                             android:layout_width="match_parent"
                             android:layout_height="468dp"
