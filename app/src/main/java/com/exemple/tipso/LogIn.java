@@ -57,8 +57,6 @@ public class LogIn extends Activity {
                     passWordConfirm.setError("Please confirm your password");
                     return;
                 }
-
-
                 if ((passWord.getText().toString()).equals(passWordConfirm.getText().toString())) {
                     MyTask task = new MyTask();
                     String s = "?firstName=" + firstName.getText().toString() +

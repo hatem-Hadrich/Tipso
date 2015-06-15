@@ -11,12 +11,10 @@ import android.widget.ProgressBar;
 public class splash extends Activity {
 
     ProgressBar progress;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
         progress = (ProgressBar) findViewById(R.id.progressBar);
         MyTask mt = new MyTask();
         mt.execute();
@@ -32,16 +30,26 @@ public class splash extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-            //for (int i = 0 ; i<params.length;i++) {
             try {
-                Thread.sleep(5000);
+                Thread.sleep(6000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            //}
-            Intent intent = new Intent(getApplicationContext(), SignIn.class);
-            startActivity(intent);
-            finish();
+            if(SaveSharedPreference.getUserEmail(splash.this).length() == 0 && SaveSharedPreference.getUserPassword(splash.this).length() == 0)
+            {
+                // call Login Activity
+                Intent intent = new Intent(getApplicationContext(), SignIn.class);
+                startActivity(intent);
+                finish();
+            }
+            else
+            {
+                // Call Next Activity
+                Intent intent = new Intent(getApplicationContext(), Acceuil.class);
+                startActivity(intent);
+                finish();
+            }
+
             return "Hello my friend on tipso";
         }
 
@@ -54,6 +62,7 @@ public class splash extends Activity {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             progress.setVisibility(View.INVISIBLE);
+
         }
     }
 }

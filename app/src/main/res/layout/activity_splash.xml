@@ -12,26 +12,16 @@
         android:weightSum="1">
 
         <ImageView
-            android:layout_width="3843dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:id="@+id/tipso_logo"
-            android:src="@drawable/splash"
+            android:src="@drawable/logotipso"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.68"
             android:layout_marginBottom="20dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tipso"
-            android:id="@+id/title_splash"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@android:color/white"
-            android:textSize="80dp"
-            android:layout_marginBottom="20dp" />
-
-        <TextView
-            android:layout_width="313dp"
+            android:layout_width="374dp"
             android:layout_height="wrap_content"
             android:text="Tipso every day...Your life will changes... Useful techniques for social media marketers"
             android:id="@+id/description_splash"
@@ -43,10 +33,11 @@
 
         <ProgressBar
             style="@style/Base.Widget.AppCompat.ProgressBar"
-            android:layout_width="103dp"
-            android:layout_height="124dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:id="@+id/progressBar"
             android:layout_gravity="center_horizontal"
-            android:paddingTop="40dp" />
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp" />
     </LinearLayout>
 </RelativeLayout>
