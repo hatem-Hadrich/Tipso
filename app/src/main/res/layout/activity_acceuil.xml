@@ -114,13 +114,9 @@
                                 android:horizontalSpacing="7dp"
                                 android:stretchMode="columnWidth"
                                 android:numColumns="auto_fit"
-                                android:choiceMode="singleChoice"
+                                android:choiceMode="multipleChoice"
                                 android:fastScrollAlwaysVisible="false"
                                 android:fastScrollEnabled="true"
-                                android:nestedScrollingEnabled="false"
-                                android:scrollingCache="false"
-                                android:smoothScrollbar="false"
-                                android:stackFromBottom="false"
                                 android:padding="7dp" />
                         </FrameLayout>
                     </LinearLayout>
@@ -447,21 +443,24 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/settings"
-                        android:text="@string/settings"
+                        android:id="@+id/Options"
+                        android:text="@string/options"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="87dp"
-                            android:layout_height="wrap_content"
-                            android:text="@string/title_acceuil"
-                            android:id="@+id/title_settings"
-                            android:layout_gravity="center"
-                            android:gravity="center_vertical|center|center_horizontal"
-                            android:textColor="@android:color/white"
-                            android:textSize="35sp" />
+                        <GridView
+                            android:id="@+id/categoriegridview"
+                            android:layout_width="match_parent"
+                            android:layout_height="468dp"
+                            android:verticalSpacing="7dp"
+                            android:horizontalSpacing="7dp"
+                            android:stretchMode="columnWidth"
+                            android:numColumns="auto_fit"
+                            android:choiceMode="multipleChoice"
+                            android:fastScrollAlwaysVisible="false"
+                            android:fastScrollEnabled="true"
+                            android:padding="7dp" />
 
                     </LinearLayout>
                 </FrameLayout>

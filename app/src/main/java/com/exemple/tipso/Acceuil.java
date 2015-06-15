@@ -30,9 +30,15 @@ public class Acceuil extends Activity {
         GridView cover = (GridView) findViewById(R.id.coverview);
         cover.setAdapter(new CoverAdapter(this));
 
+        GridView categorieGridView = (GridView) findViewById(R.id.categoriegridview);
+        categorieGridView.setAdapter(new CategorieAdapter(this));
+
+
+
         tabAcceuil();
         tabProfil();
     }
+
 
     public void tabAcceuil() {
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
